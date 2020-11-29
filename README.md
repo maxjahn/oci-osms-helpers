@@ -6,14 +6,14 @@ The typical process would start with installling updates and packages on a templ
 
 ### Prepare Environment
 
-#### create_osms_stages.sh 
+##### `create_osms_stages.sh `
 Basic initialization for OSMS stages. This will
-
+	
 1. Create empty parent software,
 1. Create empty managed instance groups for stages, and
 1. Write a config file to use in other scripts
 
-#### attach_group_instance.sh source-name target-group-name"
+##### `attach_group_instance.sh source-name target-group-name`
 
 Attaches child software source to all instances in a managed instance group.
  
@@ -21,14 +21,14 @@ If FLAG_DETACH_CURRENT_SOURCES enabled: Detach all currently attached sources be
 
 ### Creating and Attaching Software Sources
 
-#### create_child_software_source.sh template-instance-ocid custom-software-source-name
+##### `create_child_software_source.sh template-instance-ocid custom-software-source-name`
 
 Create a new child software source from a template instance.
 This will take all installed packages on the template instance and create a json document from it. This json document can be used to create a new source.
 
 Use version control on the document to keep track of history.
 
-#### attach_software_source.sh source-name target-group-name
+##### `attach_software_source.sh source-name target-group-name`
 
 Attach child software source to all instances in a managed instance group.
 
@@ -37,7 +37,7 @@ If FLAG_DETACH_CURRENT_SOURCES enabled: Detach all currently attached sources be
 
 ### Check Deviations from Target Source
 
-#### check_deviations.sh source-name target-group-name
+##### `check_deviations.sh source-name target-group-name`
 
 Check deviations of packages installed on instances in a group from target configuration/source. Steps include identifying:
 
@@ -48,7 +48,7 @@ The packages installed on each instance and packages included in the target soft
 
 ### Synchronize Packages
 
-#### sync_group_instances.sh source-name target-group-name
+##### `sync_group_instances.sh source-name target-group-name`
 
 Synchronize packages for a managed instance group, including the steps: 
 
