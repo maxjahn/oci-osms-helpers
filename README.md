@@ -48,6 +48,16 @@ The packages installed on each instance and packages included in the target soft
 
 ### Synchronize Packages
 
+
+##### `update_install_group.sh source-name target-group-name`
+Synchronize packages in a managed instance group using scheduled jobs:
+
+1. Install all available updates available for the group, i.e. from all sources attached to the instances
+1. Install packages available in source passed as argument
+
+Caution: Unlike the script for individual instances, this one will not remove any packages.
+
+
 ##### `sync_group_instances.sh source-name target-group-name`
 
 Synchronize packages for a managed instance group, including the steps: 
