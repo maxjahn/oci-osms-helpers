@@ -1,5 +1,5 @@
 #!/bin/bash
-# Synchronize packages for a managed instance group
+# Synchronize packages for instances in a managed instance group
 # (1) Install all available updates available for the group, i.e. from all sources attached to the instances
 # (2) Install packages available in source passed as argument
 # (3) If FLAG_REMOVE_PACKAGES enabled: Remove packages from instances that are not presend in source passed as argument. (Default false)
